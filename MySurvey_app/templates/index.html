@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Plant Survey</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="links">
+                <a href="{% url 'logout' %}">Log Out</a>
+            </div>
+            <h1>Fill out the form:</h1>
+            <form action="{% url 'process' %}" method="POST">
+                {% csrf_token %}
+                <label>Your Name: </label>
+                <input type="text" id="your_name" name='name' required>
+
+                <div class="plants_container">
+                    <div class="favorite_plants">
+                        <h3>What is your favorite plant?</h3>
+                        <h4>Select Plant:</h4>
+                        <div class="content">
+                            <div>
+                                <input value="Rose" type="checkbox" id="rose" name="plant">
+                                <label for="rose">Rose</label>
+                            </div>
+                            <div>
+                                <input value="Mendavilla" type="checkbox" id="mendavilla" name="plant">
+                                <label for="mendavilla">Mendavilla</label>
+                            </div>
+                            <div>
+                                <input value="Hibiscus" type="checkbox" id="hibiscus" name="plant">
+                                <label for="hibiscus">Hibiscus</label>
+                            </div>
+                            <div>
+                                <input value="Cana Lilly" type="checkbox" id="cana_lilly" name="plant">
+                                <label for="cana_lilly">Cana Lilly</label>
+                            </div>
+                            <div>
+                                <input value="Hosta" type="checkbox" id="hosta" name="plant">
+                                <label for="hosta">Hosta</label>
+                            </div>
+                            <div>
+                                <input value="Million Bells" type="checkbox" id="million_bells" name="plant">
+                                <label for="million_bells">Million Bells</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="favorite_color">
+                        <h3>What is your favorite color?</h3>
+                        <h4>Select Color:</h4>
+                        <div class="content">
+                            <div>
+                                <input value="Red" type="checkbox" id="red" name="color">
+                                <label for="red">Red</label>
+                            </div>
+                            <div>
+                                <input value="Yellow" type="checkbox" id="yellow" name="color">
+                                <label for="yellow">Yellow</label>
+                            </div>
+                            <div>
+                                <input value="Pink" type="checkbox" id="pink" name="color">
+                                <label for="pink">Pink</label>
+                            </div>
+                            <div>
+                                <input value="White" type="checkbox" id="white" name="color">
+                                <label for="white">White</label>
+                            </div>
+                            <div>
+                                <input value="Purple" type="checkbox" id="purple" name="color">
+                                <label for="purple">Purple</label>
+                            </div>
+                            <div>
+                                <input value="Orange" type="checkbox" id="orange" name="color">
+                                <label for="orange">Orange</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

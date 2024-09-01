@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategrey;
+    padding: 40px;
+    font-size: larger;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    background-color: #092015; /* Optional: Adds a background color for better contrast */
+    border-radius: 10px; /* Optional: Rounds the corners of the main div */
+    width: 91%;
+    padding: 40px;
+}
+
+.plants_container {
+    margin-top: 35px;
+}
+
+.content {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-bottom: 10px;
+    text-align: left; /* Align text to the right */
+}
+
+.content > div {
+    display: flex;
+    /* align-items: flex-start; */
+    margin-bottom: 6px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Center align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin: 20px 0 45px 0;
+    width: 100%; /* Ensure button-wrapper takes full width */
+}
+
+.btn {
+    background-color: blue;
+    color: whitesmoke;
+    padding: 8px 15px; /* Adds padding to the buttons */
+    border: none; /* Removes the default border */
+    border-radius: 7px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 16px; /* Increases the font size */
+    transition: background-color 0.3s; /* Smooth transition for background color on hover */
+    max-width: 150px; /* Set a max-width for buttons */
+    text-align: center; /* Center text inside buttons */
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: darkblue; /* Changes the background color on hover */
+}
+
+h1 {
+    color: blue;
+    margin-bottom: 40px;
+}
+
+h4 {
+    margin: 10px 0 10px 0;
+    color: blue;
+}
+
+h3 {
+    color: rgba(226, 226, 6, 0.818);
+    margin: 0;
+    min-width: 150px; /* Adjust to ensure all h3 align properly */
+    text-align: right; /* Align text to the right */
+    padding-right: 20px; /* Increase space between h3 and p */
+}
+
+.links, a {
+    color: whitesmoke;
+    margin: 10px 0 30px 0;
+}
+
+.results, li {
+    text-align: start;
+    margin-left: 31px;
+}
+
+.result, p {
+    color: rgba(226, 226, 6, 0.818);
+    margin-bottom: 5px;
+}
+
+#plant, #color {
+    margin-right: 15px;
+}
+
+#your_name{
+    width: 300px;
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column; /* Ensure input fields are below the label */
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+textarea {
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 16px;
+    width: 100%; /* Ensure inputs take full width within their containers */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+ul {
+    color: whitesmoke;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+#plant{
+    padding-left: 10px;
+}
+
+#color {
+    padding-left: 20px;
+}
+

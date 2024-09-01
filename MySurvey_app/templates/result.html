@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+    <title>Plant Survey Results</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="links">
+                <a href="{% url 'logout' %}">Log Out</a>
+            </div>
+            <h1>Excellent choice!</h1>
+            <div class="result">
+                <p>{{ request.session.name }}, here are your selections:</p>
+                <p>Plants:</p>
+                <ul>
+                    {% for plant in request.session.plant %}
+                        <li>{{ plant }}</li>
+                    {% endfor %}
+                </ul>
+                <p>Colors:</p>
+                <ul>
+                    {% for color in request.session.color %}
+                        <li>{{ color }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <a href="{% url 'index' %}" class="btn">Go Back Home</a>
+        </div>
+    </div>
+</body>
+
+</html>
